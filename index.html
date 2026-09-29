@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#16a34a" />
+    <meta name="description" content="AI-Powered Multilingual Teaching Assistant for Tribal-Area Primary Schools in Jharkhand" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect to Google Fonts for Indian scripts & typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Ol+Chiki:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>TribalBridge AI — Mother Tongue Teaching Assistant</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-tribal-100 selection:text-tribal-800">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker for offline capability
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => {
+            console.log('ServiceWorker registration skipped or failed in development:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

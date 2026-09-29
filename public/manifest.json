@@ -1,0 +1,17 @@
+{
+  "short_name": "TribalBridge",
+  "name": "TribalBridge AI – Mother Tongue Teaching Assistant",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f8fafc",
+  "theme_color": "#16a34a",
+  "display": "standalone",
+  "orientation": "any",
+  "description": "AI-powered multilingual teaching assistant for tribal-area primary schools in Jharkhand supporting Hindi, Santhali, Ho, and Mundari."
+}

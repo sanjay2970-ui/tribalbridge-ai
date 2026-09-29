@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-800 transition-colors duration-200;
+  }
+}
+
+/* Accessibility: Large Text Mode */
+body.accessibility-large-text {
+  font-size: 115%;
+}
+
+body.accessibility-large-text h1 {
+  font-size: 2.25rem !important;
+}
+
+body.accessibility-large-text h2 {
+  font-size: 1.85rem !important;
+}
+
+body.accessibility-large-text p,
+body.accessibility-large-text span,
+body.accessibility-large-text button,
+body.accessibility-large-text input,
+body.accessibility-large-text select {
+  font-size: 1.15rem !important;
+}
+
+/* Accessibility: High Contrast Mode */
+body.accessibility-high-contrast {
+  @apply bg-black text-white;
+}
+
+body.accessibility-high-contrast .bg-white {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.accessibility-high-contrast .bg-slate-50,
+body.accessibility-high-contrast .bg-slate-100 {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+body.accessibility-high-contrast .text-slate-600,
+body.accessibility-high-contrast .text-slate-500 {
+  color: #e2e8f0 !important;
+}
+
+body.accessibility-high-contrast .border-slate-200,
+body.accessibility-high-contrast .border-slate-100 {
+  border-color: #4b5563 !important;
+}
+
+/* Subtle Tribal Motif Borders and Accents */
+.tribal-pattern-border {
+  background-image: radial-gradient(#16a34a 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #ffffff 0.75px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.tribal-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #16a34a,
+    #16a34a 8px,
+    #15803d 8px,
+    #15803d 16px,
+    #d97706 16px,
+    #d97706 20px
+  );
+}
+
+/* 3D Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Print Styles for Worksheets */
+@media print {
+  /* Hide navigation, sidebar, headers, controls during print */
+  header, nav, aside, .no-print, button, .bottom-nav {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .worksheet-printable {
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+}
